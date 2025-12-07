@@ -13,7 +13,7 @@ from flatlib import const
 import yfinance as yf
 
 # Define location (required for flatlib)
-GEO = GeoPos('28.6139', '77.2090')  # New Delhi
+GEO = GeoPos('28:36:50', '77:12:32')  # New Delhi
 
 def get_planetary_positions(date_str):
     dt = Datetime(date_str, '12:00', '+05:30')
@@ -35,7 +35,7 @@ def get_sensex_price():
     try:
         url = "https://www.niftyindices.com/Backpage.aspx/GetIndexDetails"
         headers = {"Content-Type": "application/json"}
-        payload = "{"indexName":"S&P BSE SENSEX"}"
+        payload = '{"indexName":"S&P BSE SENSEX"}'
         res = requests.post(url, data=payload, headers=headers)
         return res.json()['d'][0]['lastPrice']
     except:
