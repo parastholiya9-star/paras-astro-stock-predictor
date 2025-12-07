@@ -1,0 +1,9 @@
+streamlit
+yfinance
+pandas
+matplotlib
+seaborn
+scikit-learn
+joblib
+flatlib
+requests
